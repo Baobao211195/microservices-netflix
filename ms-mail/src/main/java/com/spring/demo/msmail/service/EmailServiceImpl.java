@@ -15,7 +15,7 @@ import lombok.RequiredArgsConstructor;
 public class EmailServiceImpl implements EmailService {
 
     private final MailRepository mailRepository;
-    private final JavaMailSender emailSender;
+    //private final JavaMailSender emailSender;
 
     @Override
     public void sendSimpleMessage(UserDto input) {
@@ -25,13 +25,13 @@ public class EmailServiceImpl implements EmailService {
             newMail.setSubject("TestSubject");
             newMail.setText("TestText");
 
-            SimpleMailMessage message = new SimpleMailMessage();
-            message.setTo(newMail.getTo());
-            message.setSubject(newMail.getSubject());
-            message.setText(newMail.getText());
+//            SimpleMailMessage message = new SimpleMailMessage();
+//            message.setTo(newMail.getTo());
+//            message.setSubject(newMail.getSubject());
+//            message.setText(newMail.getText());
 
             mailRepository.save(newMail);
-            emailSender.send(message);
+           //emailSender.send(message);
         } catch (MailException exception) {
             exception.printStackTrace();
         }

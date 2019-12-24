@@ -1,8 +1,0 @@
-spring:
-    kafka:
-        bootstrap-servers: 9092
-        topic:
-            user-created: created_user
-            product-created: create_product
-        consumer:
-            group-id: create-group
