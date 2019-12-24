@@ -8,7 +8,6 @@ import org.springframework.stereotype.Service;
 import com.spring.demo.msmail.dto.UserDto;
 import com.spring.demo.msmail.entity.Mail;
 import com.spring.demo.msmail.repository.MailRepository;
-import com.sun.deploy.security.CertStore;
 import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor
